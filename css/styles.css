@@ -98,15 +98,16 @@ body {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/gallery/peopleoffice.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-
+  background-size: contain;
   background-color: var(--title-text-color);
   text-align: center;
   padding-bottom: 188px;
   padding-top: 188px;
 }
+
 .baner-titel {
   color: var(--body-color);
 
@@ -152,7 +153,6 @@ body {
 
 .benefits-item {
   max-width: 264px;
-  max-height: 104px;
 }
 
 .benefits-svg {
@@ -395,9 +395,7 @@ body {
 .contacts-footer {
   display: flex;
 
-  width: 232px;
-  height: 40px;
-  gap: 24px;
+  gap: 16px;
 }
 .contacs-footer-list {
 }
