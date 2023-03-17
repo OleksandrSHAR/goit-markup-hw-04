@@ -9,6 +9,8 @@
   --color-grey: #2e2f42;
   --color-ocean: #404bbf;
   --color-green: #31d0aa;
+
+  --border-color: #8e8f99;
 }
 
 body {
@@ -91,6 +93,15 @@ body {
 }
 /*--------------------------- Baner -----------------------*/
 .baner {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/gallery/peopleoffice.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   background-color: var(--title-text-color);
   text-align: center;
   padding-bottom: 188px;
@@ -125,6 +136,8 @@ body {
 .button-baner:hover,
 .button-baner:focus {
   background-color: var(--color-ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*------------------------ Benefits -----------------*/
 .benefits {
@@ -141,6 +154,20 @@ body {
   max-width: 264px;
   max-height: 104px;
 }
+
+.benefits-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+
+  background-color: var(--accent-color);
+}
+
+.svg-item {
+  width: 64px;
+  height: 64px;
+}
 .benefits-list {
   color: var(--title-text-color);
   font-weight: 500;
@@ -149,6 +176,7 @@ body {
 
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .benefits-text {
@@ -191,12 +219,14 @@ body {
 }
 .team-section {
   width: 264px;
-  height: 380px;
+  height: 428px;
   background-color: var(--body-color);
 
   border-radius: 4px;
 
   flex-basis: calc((100% - 24px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-flex {
   display: flex;
@@ -236,7 +266,86 @@ body {
 
   letter-spacing: 0.02em;
   margin: 0;
+  margin-bottom: 8px;
 }
+
+.contacts {
+  display: flex;
+
+  width: 232px;
+  height: 40px;
+  gap: 24px;
+}
+.contacs-list {
+}
+.contacs-stail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--logo-text-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.contacs-stail:is(:hover, :focus) {
+  background-color: var(--color-ocean);
+}
+
+.contacts-item {
+  width: 16px;
+  height: 16px;
+}
+/*--------------------------Customers-----------------------*/
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers-titel {
+  color: var(--title-text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11em;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  width: 1128px;
+  height: 88px;
+  gap: 24px;
+}
+.customers-item {
+  width: 168px;
+  height: 88px;
+}
+.customers-stail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 88px;
+  border: 2px solid var(--border-color);
+
+  fill: var(--border-color);
+
+  border-radius: 4px;
+}
+.customers-item :is(:hover, :focus) {
+  border-color: var(--color-ocean);
+
+  fill: var(--color-ocean);
+}
+.customers-svg {
+  width: 104px;
+  height: 56px;
+}
+
 /* ---------------------------Footer------------------------ */
 .footer {
   background-color: var(--color-grey);
@@ -246,7 +355,9 @@ body {
   padding-bottom: 100px;
 }
 .footer-section {
+  display: flex;
   margin-left: auto;
+  gap: 120px;
 }
 .logo-footer {
   color: var(--logo-text-color);
@@ -270,6 +381,42 @@ body {
   letter-spacing: 0.02em;
   width: 264px;
   height: 72px;
+}
+.media-titel {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+
+  letter-spacing: 0.02em;
+  color: var(--body-color);
+  margin-bottom: 16px;
+}
+.contacts-footer {
+  display: flex;
+
+  width: 232px;
+  height: 40px;
+  gap: 24px;
+}
+.contacs-footer-list {
+}
+.contacs-footer-stail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--praimary-text-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.contacs-footer-stail:is(:hover, :focus) {
+  background-color: var(--color-green);
+}
+
+.contacts-footer-item {
+  width: 24px;
+  height: 24px;
 }
 
 /*!-------------------Portfolio--------------------*/
@@ -296,6 +443,10 @@ body {
   border: 1px solid #e7e9fc;
 
   width: 360px;
+}
+.projects-list:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .port-list {
   display: block;
@@ -333,6 +484,8 @@ body {
   letter-spacing: 0.04em;
   padding: 12px 24px;
   border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .projects-item {
   margin-bottom: 8px;
